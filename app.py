@@ -136,13 +136,11 @@ input_data = pd.DataFrame({
     "euribor3m": [euribor3m],
     "nr.employed": [nr_employed]
 })
-
 if st.button("Predict"):
-prediction = model.predict(input_data)[0]
+    prediction = model.predict(input_data)[0]
 
 if prediction == "yes":
     st.success("Prediction: Yes - The customer is likely to subscribe.")
 else:
     st.error("Prediction: No - The customer is not likely to subscribe.")
-
 
