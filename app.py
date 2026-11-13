@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
+import joblib
 
+model1=joblib.load("random_forest_model_joblib")
 st.title("Bank Marketing Prediction")
 st.write("Predict whether a customer will subscribe to a bank term deposit.")
 
@@ -136,8 +138,11 @@ input_data = pd.DataFrame({
 })
 
 if st.button("Predict"):
-    st.write("Customer information:")
-    st.dataframe(input_data)
-    st.info("The prediction model will be connected next.")
+prediction = model.predict(input_data)[0]
+
+if prediction == "yes":
+    st.success("Prediction: Yes - The customer is likely to subscribe.")
+else:
+    st.error("Prediction: No - The customer is not likely to subscribe.")
 
 
