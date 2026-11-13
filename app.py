@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model1=joblib.load("random_forest_model_joblib")
+model = joblib.load("random_forest_model.joblib")
 st.title("Bank Marketing Prediction")
 st.write("Predict whether a customer will subscribe to a bank term deposit.")
 
