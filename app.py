@@ -140,7 +140,7 @@ input_data = pd.DataFrame({
 if st.button("Predict"):
     prediction = model.predict(input_data)[0]
 
-    if prediction == "yes":
+    if prediction == 1:
         st.success("Prediction: Yes - The customer is likely to subscribe.")
     else:
         st.error("Prediction: No - The customer is not likely to subscribe.")
