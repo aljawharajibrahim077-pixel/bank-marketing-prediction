@@ -135,7 +135,9 @@ input_data = pd.DataFrame({
     "cons.conf.idx": [cons_conf_idx],
     "euribor3m": [euribor3m],
     "nr.employed": [nr_employed]
-})if st.button("Predict"):
+})
+
+if st.button("Predict"):
     prediction = model.predict(input_data)[0]
 
     if prediction == "yes":
