@@ -20,10 +20,10 @@ job = st.selectbox("Job", [
 ])
 
 
-
 marital = st.selectbox("Marital Status", [
     "single", "married", "divorced", "unknown"
 ])
+
 
 
 education = st.selectbox("Education", [
